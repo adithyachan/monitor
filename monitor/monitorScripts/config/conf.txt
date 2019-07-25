@@ -1,0 +1,10 @@
+#Config File for services-metrics-proc.py
+
+#Defaults to "[all]". Add service name and separate by comma. Ex. [accounts-daemon], [influxdb], [grafana-server]
+Services to monitor: [all]
+
+#Number of processes to graph on grafana dashboard. Defaults to 10.
+Top 'n' processes to graph: 10
+
+#whether quiet mode should be enabled or not
+quiet: y

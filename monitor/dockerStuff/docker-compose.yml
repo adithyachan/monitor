@@ -1,0 +1,20 @@
+version: '3'
+services:
+  influxdb:
+    restart: always
+    image: 'adithyachan/monitor:influxdb'
+    volumes:
+        - ./influxdb/data:/var/lib/influxdb
+        - ./influxdb/config/:/etc/influxdb
+    ports:
+        - 8086:8086
+
+  grafana:
+    image: 'adithyachan/monitor:grafana'
+    restart: always
+    volumes:
+        - ./grafana/config:/etc/grafana
+        - ./grafana/provisioning:/etc/grafana/provisioning
+        - ./grafana/dashboards:/home/grafana/dashboards
+    ports:
+        - 3000:3000

@@ -1,0 +1,30 @@
+datasources:
+- name: 'InfluxDB'
+  type: 'influxdb'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://influxdb:8086'
+  is_default: true
+  database: 'Metrics'
+  version: 1
+  editable: true
+
+- name: 'InfluxDB-1'
+  type: 'influxdb'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://influxdb:8086'
+  is_default: false
+  database: 'Services'
+  version: 1
+  editable: true
+
+- name: 'InfluxDB-2'
+  type: 'influxdb'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://influxdb:8086'
+  is_default: false
+  database: 'Processes'
+  version: 1
+  editable: true
